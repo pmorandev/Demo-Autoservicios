@@ -1,0 +1,43 @@
+﻿@model Demo.Interfaz.DemoComplemento
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DemoComplemento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DemoTipoCom.TipoDescripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DemoTipoCom.TipoDescripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComplementoPrecio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComplementoPrecio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComplementoDescripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComplementoDescripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

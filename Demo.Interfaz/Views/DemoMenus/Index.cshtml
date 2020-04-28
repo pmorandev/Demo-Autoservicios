@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Demo.Interfaz.DemoMenu>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuDescripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MenuDescripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MenuCodigo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MenuCodigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MenuCodigo })
+        </td>
+    </tr>
+}
+
+</table>

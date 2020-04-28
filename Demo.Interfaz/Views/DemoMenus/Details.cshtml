@@ -1,0 +1,27 @@
+﻿@model Demo.Interfaz.DemoMenu
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DemoMenu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuDescripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuDescripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MenuCodigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

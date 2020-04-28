@@ -1,0 +1,81 @@
+﻿@model Demo.Interfaz.DemoProduct
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DemoProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DemoMenu.MenuDescripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DemoMenu.MenuDescripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductCantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductCantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductDescripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductDescripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductPrecio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPrecio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductTitulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductTitulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductComplementos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductComplementos)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

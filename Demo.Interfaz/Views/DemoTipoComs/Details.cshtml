@@ -1,0 +1,59 @@
+﻿@model Demo.Interfaz.DemoTipoCom
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DemoTipoCom</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DemoProduct.ProductDescripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DemoProduct.ProductDescripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDescripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoDescripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoMaxCantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoMaxCantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoCantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoCantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoOrden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoOrden)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TipoCodigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

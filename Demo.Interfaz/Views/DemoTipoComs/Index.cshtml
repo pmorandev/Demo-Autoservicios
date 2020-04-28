@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Demo.Interfaz.DemoTipoCom>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DemoProduct.ProductDescripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDescripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoMaxCantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoCantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoOrden)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DemoProduct.ProductDescripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDescripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoMaxCantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoCantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoOrden)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TipoCodigo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TipoCodigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TipoCodigo })
+        </td>
+    </tr>
+}
+
+</table>

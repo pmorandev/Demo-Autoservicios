@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Demo.Interfaz.DemoProduct>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DemoMenu.MenuDescripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductCantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductDescripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductPrecio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductTitulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductComplementos)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DemoMenu.MenuDescripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductCantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductDescripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductPrecio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductTitulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductComplementos)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductCodigo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductCodigo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductCodigo })
+        </td>
+    </tr>
+}
+
+</table>
